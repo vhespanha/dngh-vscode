@@ -1,16 +1,48 @@
-# dngh-vscode README
+# Definetely Not Github's Theme
 
-## Working with Markdown
+![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/vhespanha/dngh-vscode)
+![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/vhespanha/dngh-vscode)
+![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/vhespanha/dngh-vscode)
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## Description
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+**Definetely Not Github's Theme** is a dark theme for Visual Studio Code that provides a darker look to the Primer Design System.
 
-## For more information
+## Installation
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+### From the Marketplace
 
-**Enjoy!**
+1. Open Visual Studio Code.
+2. Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`.
+3. Search for "Definetely Not Github's Theme".
+4. Click **Install** to install the theme.
+
+### Manual Installation
+
+1. Download the latest release from the [GitHub releases page](https://github.com/vhespanha/dngh-vscode/releases).
+2. Extract the contents into the `~/.vscode/extensions` directory.
+3. Restart Visual Studio Code.
+
+## Usage
+
+1. Open Visual Studio Code.
+2. Go to the Command Palette with `Ctrl+Shift+P`.
+3. Type `Preferences: Color Theme` and select **Definetely Not Github's Theme** from the list.
+
+## Screenshots
+
+![Screenshot](path/to/screenshot.png)
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or have found a bug, please open an issue or submit a pull request.
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature-name`.
+3. Make your changes and commit them: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature/your-feature-name`.
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

@@ -2,10 +2,26 @@
   "name": "dngh-vscode",
   "displayName": "Definetely Not Github's Theme",
   "description": "A dark theme that is not at all like Github's",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "publisher": "vhespanha",
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#0f0f0f",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vhespanha/dngh-vscode"
+  },
   "engines": {
     "vscode": "^1.89.0"
   },
+  "keywords": [
+    "theme",
+    "github",
+    "dark"
+  ],
   "categories": [
     "Themes"
   ],
@@ -14,8 +30,13 @@
       {
         "label": "Definetely Not Github's Theme",
         "uiTheme": "vs-dark",
-        "path": "./themes/Definetely Not Github's Theme-color-theme.json"
+        "path": "./themes/dngh-color-theme.json"
       }
     ]
+  },
+  "scripts": {
+    "package": "vsce package -o ./build/dngh-color-theme.vsix",
+    "prepublishOnly": "npm run package && vsce publish",
+    "release": "changeset publish"
   }
 }
