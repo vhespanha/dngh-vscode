@@ -1,0 +1,21 @@
+{
+  "name": "dngh-vscode",
+  "displayName": "Definetely Not Github's Theme",
+  "description": "A dark theme that is not at all like Github's",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Definetely Not Github's Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Definetely Not Github's Theme-color-theme.json"
+      }
+    ]
+  }
+}
