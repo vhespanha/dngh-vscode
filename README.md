@@ -1,8 +1,6 @@
 # Definetely Not Github's Theme
 
-![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/vhespanha/dngh-vscode)
-![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/vhespanha/dngh-vscode)
-![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/vhespanha/dngh-vscode)
+![Icon](assets/icon.png)
 
 ## Description
 
@@ -31,7 +29,8 @@
 
 ## Screenshots
 
-![Screenshot](path/to/screenshot.png)
+![Codesnap](assets/code.png)
+![Screenshot](assets/screenshot.png)
 
 ## Contributing
 
