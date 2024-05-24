@@ -1,4 +1,4 @@
-name: Release VS Code Theme
+name: Publish Extension
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,41 +18,27 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install vsce
+        run: npm install -g vsce
 
-      - name: Package the extension
-        run: |
-          npm install -g @vscode/vsce
-          vsce package
+      - name: Install ovsx
+        run: npm install -g @vscode/vsce @open-vsx/cli
+
+      - name: Package VSCode Extension
+        run: vsce package
+        id: package_extension
 
       - name: Create GitHub Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: v${{ github.sha }}
-          release_name: Release ${{ github.sha }}
-          draft: false
-          prerelease: false
+          artifacts: '*.vsix'
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          name: 'Release ${{ github.ref }}'
+          tag: ${{ github.ref }}
+          commit: ${{ github.sha }}
 
-      - name: Upload VSIX to GitHub Release
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./*.vsix
-          asset_name: theme.vsix
-          asset_content_type: application/octet-stream
-
-      - name: Publish to VS Code Marketplace
-        env:
-          VSCE_PAT: ${{ secrets.VSCE_TOKEN }}
-        run: |
-          vsce publish --pat $VSCE_PAT
+      - name: Publish to VSCode Marketplace
+        run: vsce publish -p ${{ secrets.VSCE_TOKEN }}
 
       - name: Publish to OpenVSX
-        env:
-          OVSX_PAT: ${{ secrets.OVSX_TOKEN }}
-        run: |
-          npx ovsx publish theme.vsix -p $OVSX_PAT
+        run: ovsx publish *.vsix -p ${{ secrets.OVSX_TOKEN }}
