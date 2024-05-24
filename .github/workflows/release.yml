@@ -24,19 +24,34 @@ jobs:
       - name: Install ovsx
         run: npm install --global ovsx
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Package VSCode Extension
-        run: vsce package
+        run: npm run package
         id: package_extension
 
       - name: Create a Release
+        id: create_release
         uses: elgohr/Github-Release-Action@v5
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          title: MyReleaseMessage
+          title: 'Release ${{ github.sha }}'
+          workdir: ./build
+
+      - name: Upload VSIX to GitHub Release
+        uses: actions/upload-release-asset@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./build/dngh-color-theme.vsix
+          asset_name: dngh-color-theme.vsix
+          asset_content_type: application/octet-stream
 
       - name: Publish to VSCode Marketplace
         run: vsce publish -p ${{ secrets.VSCE_TOKEN }}
 
       - name: Publish to OpenVSX
-        run: ovsx publish *.vsix -p ${{ secrets.OVSX_TOKEN }}
+        run: ovsx publish ./build/dngh-color-theme.vsix -p ${{ secrets.OVSX_TOKEN }}
