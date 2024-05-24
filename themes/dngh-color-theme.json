@@ -50,7 +50,7 @@
 
     // Title bar colors
     "titleBar.activeForeground": "#7d8590",
-    "titleBar.activeBackground": "#0f0f0f",
+    "titleBar.activeBackground": "#010409",
     "titleBar.inactiveForeground": "#7d8590",
     "titleBar.inactiveBackground": "#010409",
     "titleBar.border": "#0000",
