@@ -19,10 +19,10 @@ jobs:
           node-version: '20'
 
       - name: Install vsce
-        run: npm install -g vsce
+        run: npm install -g @vscode/vsce
 
       - name: Install ovsx
-        run: npm install --global ovsx
+        run: npm install --g ovsx
 
       - name: Install dependencies
         run: npm install
