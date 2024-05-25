@@ -114,8 +114,8 @@
     "statusBarItem.prominentBackground": "#2A2B2C66",
     "statusBarItem.remoteForeground": "#7d8590",
     "statusBarItem.remoteBackground": "#010409",
-    "statusBarItem.hoverBackground": "#e6edf314",
-    "statusBarItem.activeBackground": "#e6edf31f",
+    "statusBarItem.hoverBackground": "#2A2B2C66",
+    "statusBarItem.activeBackground": "#2A2B2C66",
     "statusBarItem.focusBorder": "#b392f0",
 
     // Editor group and tab colors
