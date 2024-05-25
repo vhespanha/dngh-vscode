@@ -112,7 +112,7 @@
     "statusBar.debuggingForeground": "#ffffff",
     "statusBar.debuggingBackground": "#f85149",
     "statusBarItem.prominentBackground": "#2A2B2C66",
-    "statusBarItem.remoteForeground": "#e6edf3",
+    "statusBarItem.remoteForeground": "#7d8590",
     "statusBarItem.remoteBackground": "#010409",
     "statusBarItem.hoverBackground": "#e6edf314",
     "statusBarItem.activeBackground": "#e6edf31f",
@@ -120,8 +120,8 @@
 
     // Editor group and tab colors
     "editorGroupHeader.tabsBackground": "#010409",
-    "editorGroupHeader.tabsBorder": "#0000",
-    "editorGroup.border": "#0000",
+    "editorGroupHeader.tabsBorder": "#2A2B2C66",
+    "editorGroup.border": "#2A2B2C66",
     "tab.activeForeground": "#e6edf3",
     "tab.inactiveForeground": "#7d8590",
     "tab.inactiveBackground": "#010409",
